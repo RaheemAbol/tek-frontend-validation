@@ -1,0 +1,114 @@
+:root {
+  --base-color: #171717;
+  --secondary-color: #a1460e;
+  --action-color: #cc6d3d;
+  --layover-color: #d2e1f36c;
+}
+
+body {
+  margin-top: 10rem;
+  height: 125vh;
+  background-size: cover;
+  background-image: url("../images/carside2.jpg");
+  background-blend-mode: hard-light;
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 300px));
+  gap: 4rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.868);
+}
+
+.card:hover {
+  box-shadow: 0 0 20px 5px rgba(255, 157, 72, 0.868);
+}
+
+.image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.navbar {
+  height: 15vh;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(
+    rgba(211, 211, 211, 1) 0%,
+    rgba(211, 211, 211, 0.5) 50%,
+    rgba(211, 211, 211, 0) 100%
+  );
+
+  padding: 1rem;
+  height: 20vh;
+}
+
+.navbar-hidden {
+  top: -250px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 2em;
+}
+
+a {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: inherit;
+  transition: 0.4s ease, text-shadow 0.4s ease-in-out;
+}
+
+a:hover {
+  color: #0f0e0e;
+  text-shadow: 0 0 5px #edd369, 0 0 10px #b65959, 0 0 15px #b66759,
+    0 0 20px #db6034, 0 0 35px #ff2a00, 0 0 40px #db6c34;
+}
+
+/* Add media query for responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}

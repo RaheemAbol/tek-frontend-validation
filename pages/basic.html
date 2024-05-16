@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-section"></div>
+      <div class="form-section">
+        <h1>Sign Up For An Account</h1>
+        <form>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Full Name"
+            minlength="2"
+            maxlength="50"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            required
+          />
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            placeholder="Phone number"
+            pattern="^\d{10}$"
+            required
+          />
+          <input
+            type="text"
+            id="password"
+            name="password"
+            placeholder="Password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+            required
+          />
+
+          <select id="refer" name="refer" required>
+            <option value="" disabled selected>
+              How did you hear about us?
+            </option>
+            <option value="facebook">Facebook</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="google">Google</option>
+          </select>
+          <fieldset class="dining-space">
+            <legend>Preferred Contact Method</legend>
+            <label>
+              <input type="radio" name="contact" value="email" required />
+              Email
+            </label>
+            <label>
+              <input type="radio" name="contact" value="phone" required />
+              Phone
+            </label>
+          </fieldset>
+
+          <label>
+            <input type="checkbox" name="terms" required />
+            I agree to the terms and conditions
+          </label>
+
+          <button type="submit" class="book-btn">Register</button>
+        </form>
+        <p>Already a member?... <a href="login.html">Sign in</a></p>
+      </div>
+    </div>
+  </body>
+</html>

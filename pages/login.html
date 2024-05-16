@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-hidden">
+      <ul>
+        <li><a href="../pages/home.html">Home</a></li>
+        <li>
+          <a href="../pages/products.html">Products</a>
+        </li>
+        <li><a href="../pages/login.html">Login</a></li>
+        <li><a href="../pages/register.html">Register</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <form id="form" action="./home.html">
+        <h1>Login</h1>
+
+        <div class="input-control">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" />
+          <div class="error"></div>
+        </div>
+        <button id="sub" type="submit">Sign in</button>
+      </form>
+    </div>
+
+    <script type="module" src="../js/navbar.js"></script>
+    <script type="module" src="../js/login-validation.js"></script>
+  </body>
+</html>
